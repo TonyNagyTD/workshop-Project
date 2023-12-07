@@ -1,0 +1,182 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+.filter-bar{
+    width: 100%;
+    min-height: 50px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0px 2px 10px 0px #b4c1c3;
+    border-radius: 8px;
+    margin-top: -15px;
+}
+.filter-bar__tag-input{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.tag-input__tag {
+    color: #137079;
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    margin-right: 10px;
+    background-color: #f0fafb;
+    border-radius: 4px;
+    padding: 0 0px 0 8px;
+  }
+  .tag-input__tag > span {
+    cursor: pointer;
+    opacity: 0.75;
+    display: inline-block;
+    padding: 0 6px 0 6px;
+    text-align: center;
+    background-color: #137079;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    margin-inline-start: 0.3rem;
+  }
+  .tag-input__tag > span:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .clear-btn--style{
+    background-color: #ffffff;
+    color: #137079;
+    text-decoration: underline;
+    border: none;
+    font-weight: $font-weight-regular;
+    font-size: 16px;
+    font-family: $body-font-family ;
+  }
+  .card-list{
+    margin: 2rem 0;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: none;
+    border-left: 3px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px 0px #b4c1c3;
+    position: relative;
+  }
+  .card-list:hover{
+    border-left: 3px solid #137079;
+  }
+  .left-side{
+    display: flex;
+    align-items: center;
+  }
+  .left-side__img{
+    margin-inline-end: 1rem;
+  }
+  .left-side__img__style{
+        width: 88px;
+        height: 88px;
+  }
+  .left-side__info__name{
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+  .left-side__info__title{
+    display: flex;
+    align-items: center;
+  }
+  .left-side__info__title__h2{
+    color: #137079;
+    font-family: $body-font-family;
+    font-weight: $font-weight-bold;
+    font-size: $body-font-size;
+    margin: 0;
+  }
+  .left-side__info__tags{
+    margin-inline-start: 0.5rem;
+  }
+  .left-side__info__tags__Btn{
+    background-color: #137079;
+    color: #ffffff;
+    border: none;
+    font-family: $body-font-family;
+    font-weight: $font-weight-regular;
+    font-size: 12px;
+    margin-inline-end: 0.5rem;
+    border-radius: 15px;
+    line-height: normal;
+    padding: 5px 10px;
+  }
+  .left-side__info__tags__Btn--black{
+    background-color: #000000;
+  }
+  .left-side__info__position{
+    margin-bottom: 0.5rem;
+  }
+  .left-side__info__position__h2{
+    color: $VeryDarkGrayishCyan-color;
+    font-family: $body-font-family;
+    font-weight: $font-weight-bold;
+    font-size: $body-font-size;
+    margin: 0;
+  }
+  .left-side__info__contact-info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact-info__prag{
+    color: gray;
+    font-family: $body-font-family;
+    font-weight: $font-weight-regular;
+    font-size: $body-font-size;
+    margin: 0;
+  }
+  .contact-info__prag:not(:first-child)::before{
+    content: "•";
+    margin: 0 0.5rem;
+    color: gray;
+  }
+  .right-side{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .right-side__filter-tags__btns{
+    background-color: #f0fafb;
+    padding: 0.3rem 0.5rem;
+    color: #137079;
+    border: none;
+    font-family: $body-font-family;
+    font-weight: $font-weight-regular;
+    font-size: $body-font-size;
+    margin-inline-end: 0.5rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+  }
+  .seperator{
+    height: 1px;
+    width: 100%;
+    background-color: rgb(218, 208, 208);
+    display: none;
+    margin: 1rem 0;
+  }
+  @media(max-width:768px){
+    .card-list{
+        padding-top: 2.5rem;
+    }
+    .left-side__img__style{
+        position: absolute;
+        top: -1.5rem;
+        width: 60px;
+        height: 60px;
+    }
+    .seperator{
+        display: block;
+    }
+    .right-side{
+        justify-content: flex-start;
+    }
+    .tag-input__tag{
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+  }
