@@ -1,7 +1,5 @@
-<!-- eslint-disable vue/no-parsing-error -->
 <template>
   <div class="list-component">
-    <!-- Your component content here -->
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -117,29 +115,24 @@ export default {
       }
     },
     filterByLanguage (selectedLanguage) {
-    // Toggle the selected language in the tags array
       if (this.tags.includes(selectedLanguage)) {
-      // If the language is already selected, remove it
         this.tags = this.tags.filter(tag => tag !== selectedLanguage)
       } else {
-      // If the language is not selected, add it
         this.tags.push(selectedLanguage)
       }
 
-      // If there are selected tags, filter the list; otherwise, show all data
       if (this.tags.length > 0) {
         this.list = listData.filter(item =>
           this.tags.every(tag => item.languages.includes(tag))
         )
       } else {
-      // If no tags are selected, show all data
         this.list = listData
       }
     },
     clearTags () {
       this.tags = []
-      this.list = listData // Reset the list to show all data
-      this.showFilterBar = false // Add a data property to control filter bar visibility
+      this.list = listData
+      this.showFilterBar = false
     }
   }
 }
